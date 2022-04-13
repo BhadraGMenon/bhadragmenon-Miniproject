@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{%  load static %} 
+{% block content %}
+
+<section >
+    <br>
+    <img src="{% static 'images/pic1.jpg' %}" style="width: 98%;
+    height: 442px;
+    position: relative;
+    z-index: 0; border-radius:82px 3px 82px 3px;" class="img-fluid">
+    <div class="container" style="position:relative; top:-72px; ">
+        <div class="row" align="center">
+            <div class="col-lg-4" align="center">
+                <img src="{% static 'images/pic2.jpg' %}" width="200" height="200" class="rounded shw">
+                <div class="card" style="width: 18rem;">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Tiger</h5>
+                      <p class="card-text">Wild animal</p>
+                      <a href="#" class="btn btn-primary">National Animal</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4" align="center">
+                <img src="{% static 'images/pic4.jpg' %}" width="200" height="200" class="rounded shw">
+                <div class="card" style="width: 18rem;">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Kids</h5>
+                      <p class="card-text">“No one understands what it is like to live with cancer better than someone else who has cancer,” says Kelly Lange, who was diagnosed with metastatic breast cancer 15 years ago. Soon after, she started attending METAvivor support groups around her hometown of Annapolis, MD. Now she volunteers for the nonprofit. “When you’re newly diagnosed, it can be very reassuring to meet someone who has managed to live well with the disease.”</p>
+                      <a href="#" class="btn btn-primary">Adorable</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4" align="center">
+                <img src="{% static 'images/pic3.jpg' %}" width="200" height="200" class="rounded shw">
+                <div class="card" style="width: 18rem;">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Birds</h5>
+                      <p class="card-text">
+                       Birds  Fly  in the Sky
+                      </p>
+                      <a href="#" class="btn btn-primary">Fly</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section class="container">
+    <div class="row">
+        <div class="col-lg-12" algin="center">
+            <h1 align='center'>What can I do with image caption generator?</h1>
+           <p> In the modern era, image captioning has become 
+            one of the most widely required tools. Moreover, there are inbuilt 
+            applications that generate and provide a caption for a certain 
+            image, all these things are done with the help of deep neural 
+            network models. The process of generating a description of an 
+            image is called image captioning. It requires recognizing the 
+            important objects, their attributes, and the relationships among 
+            the objects in an image. It generates syntactically and 
+            semantically correct sentences.In this paper, we present a deep 
+            learning model to describe images and generate captions using 
+            computer vision and machine translation. This paper aims to 
+            detect different objects found in an image, recognize the 
+            relationships between those objects and generate captions. The 
+            dataset used is Flickr8k and the programming language used 
+            was Python3, and an ML technique called Transfer Learning 
+            will be implemented with the help of the Xception model, to 
+            demonstrate the proposed experiment. This paper will also 
+            elaborate on the functions and structure of the various Neural 
+            networks involved. Generating image captions is an important 
+            aspect of Computer Vision and Natural language processing. 
+            Image caption generators can find applications in Image 
+            segmentation as used by Facebook and Google Photos, and even 
+            more so, its use can be extended to video frames. They will easily 
+            automate the job of a person who has to interpret images. Not to 
+            mention it has immense scope in helping visually impaired 
+            people.</p>
+        </div>
+    </div>
+    
+</section>
+<hr>
+<br>
+<br>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6" algin="center">
+                  <img src="{% static 'images/pic4.jpg' %}" class="rounded-circle" width="400" height="400">
+            </div>
+            <div class="col-lg-6"id="lg">
+                <form  method="post" action="/login">
+                    {% csrf_token %}
+                    <div class="row text-center" align="center">
+                        <!--row-->
+                        <h1>Login Here !</h1> 
+                         
+                            <div class="form-group">
+                                <label for="_idusr" class="form-label">Username</label>
+                                <input type="text" id="_idusr" class="form-control"  placeholder="Username" name="usr" required>
+            
+                            </div>
+                            <div class="form-group ">
+                                <label for="_idps" class="form-label">Password</label>
+                                <input type="password" id="_idps" class="form-control"  placeholder="Password" name="ps" required>
+            
+                            </div>
+                         
+                            
+                            <div class="form-group col-lg-12 text-center" align="center">
+                               <br>
+                                <input type="submit" class="btn btn-primary" value="Submit" >
+            
+                            </div>
+                        
+                            <!--/row-->
+            
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
