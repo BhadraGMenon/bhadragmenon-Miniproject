@@ -1,0 +1,23 @@
+{% extends 'homepage.html' %}
+{% load static %} 
+{% block content %} 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1>Caption</h1>
+            {% for ls  in data %}
+             <p>
+               <img src="{{ls.pic.url}}" style="width:200px; height:150px;">
+               
+             </p>
+             {% endfor %}
+             <p>
+                <h3> {{rs}}</h3>
+                 <br>
+                  <a class="btn btn-primary" href="/mksound">Sound</a>
+             </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
